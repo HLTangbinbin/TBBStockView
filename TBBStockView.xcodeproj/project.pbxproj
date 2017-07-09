@@ -1,0 +1,683 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C6EFEB581F12310500ACB0D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EFEB571F12310500ACB0D3 /* main.m */; };
+		C6EFEB5B1F12310500ACB0D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EFEB5A1F12310500ACB0D3 /* AppDelegate.m */; };
+		C6EFEB611F12310500ACB0D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6EFEB5F1F12310500ACB0D3 /* Main.storyboard */; };
+		C6EFEB631F12310500ACB0D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6EFEB621F12310500ACB0D3 /* Assets.xcassets */; };
+		C6EFEB661F12310500ACB0D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6EFEB641F12310500ACB0D3 /* LaunchScreen.storyboard */; };
+		C6EFEB711F12310500ACB0D3 /* TBBStockViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EFEB701F12310500ACB0D3 /* TBBStockViewTests.m */; };
+		C6EFEB7C1F12310500ACB0D3 /* TBBStockViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EFEB7B1F12310500ACB0D3 /* TBBStockViewUITests.m */; };
+		C6EFEB8B1F12314000ACB0D3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EFEB8A1F12314000ACB0D3 /* ViewController.m */; };
+		C6EFEB8F1F12315300ACB0D3 /* BtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EFEB8D1F12315300ACB0D3 /* BtnView.m */; };
+		C6EFEB901F12315300ACB0D3 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6EFEB8E1F12315300ACB0D3 /* data.plist */; };
+		C6EFEBAB1F12316000ACB0D3 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EFEB931F12316000ACB0D3 /* MASCompositeConstraint.m */; };
+		C6EFEBAC1F12316000ACB0D3 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EFEB961F12316000ACB0D3 /* MASConstraint.m */; };
+		C6EFEBAD1F12316000ACB0D3 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EFEB981F12316000ACB0D3 /* MASConstraintMaker.m */; };
+		C6EFEBAE1F12316000ACB0D3 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EFEB9A1F12316000ACB0D3 /* MASLayoutConstraint.m */; };
+		C6EFEBAF1F12316000ACB0D3 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EFEB9E1F12316000ACB0D3 /* MASViewAttribute.m */; };
+		C6EFEBB01F12316000ACB0D3 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EFEBA01F12316000ACB0D3 /* MASViewConstraint.m */; };
+		C6EFEBB11F12316000ACB0D3 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EFEBA21F12316000ACB0D3 /* NSArray+MASAdditions.m */; };
+		C6EFEBB21F12316000ACB0D3 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EFEBA51F12316000ACB0D3 /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		C6EFEBB31F12316000ACB0D3 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EFEBA71F12316000ACB0D3 /* View+MASAdditions.m */; };
+		C6EFEBB41F12316000ACB0D3 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EFEBAA1F12316000ACB0D3 /* ViewController+MASAdditions.m */; };
+		C6EFEBC61F12317400ACB0D3 /* TBBTimeLine.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EFEBB91F12317400ACB0D3 /* TBBTimeLine.m */; };
+		C6EFEBC71F12317400ACB0D3 /* TBBTimeLineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EFEBBB1F12317400ACB0D3 /* TBBTimeLineModel.m */; };
+		C6EFEBC81F12317400ACB0D3 /* TBBTimeLinePointModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EFEBBD1F12317400ACB0D3 /* TBBTimeLinePointModel.m */; };
+		C6EFEBC91F12317400ACB0D3 /* TBBTimeLineTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EFEBBF1F12317400ACB0D3 /* TBBTimeLineTopView.m */; };
+		C6EFEBCA1F12317400ACB0D3 /* TBBTimeLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EFEBC11F12317400ACB0D3 /* TBBTimeLineView.m */; };
+		C6EFEBCB1F12317400ACB0D3 /* TBBTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EFEBC31F12317400ACB0D3 /* TBBTouchView.m */; };
+		C6EFEBCC1F12317400ACB0D3 /* UIColor+HL.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EFEBC51F12317400ACB0D3 /* UIColor+HL.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C6EFEB6D1F12310500ACB0D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6EFEB4B1F12310500ACB0D3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C6EFEB521F12310500ACB0D3;
+			remoteInfo = TBBStockView;
+		};
+		C6EFEB781F12310500ACB0D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6EFEB4B1F12310500ACB0D3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C6EFEB521F12310500ACB0D3;
+			remoteInfo = TBBStockView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C6EFEB531F12310500ACB0D3 /* TBBStockView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TBBStockView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6EFEB571F12310500ACB0D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C6EFEB591F12310500ACB0D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C6EFEB5A1F12310500ACB0D3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C6EFEB601F12310500ACB0D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C6EFEB621F12310500ACB0D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C6EFEB651F12310500ACB0D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C6EFEB671F12310500ACB0D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6EFEB6C1F12310500ACB0D3 /* TBBStockViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TBBStockViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6EFEB701F12310500ACB0D3 /* TBBStockViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBBStockViewTests.m; sourceTree = "<group>"; };
+		C6EFEB721F12310500ACB0D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6EFEB771F12310500ACB0D3 /* TBBStockViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TBBStockViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6EFEB7B1F12310500ACB0D3 /* TBBStockViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBBStockViewUITests.m; sourceTree = "<group>"; };
+		C6EFEB7D1F12310500ACB0D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6EFEB891F12314000ACB0D3 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C6EFEB8A1F12314000ACB0D3 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C6EFEB8C1F12315300ACB0D3 /* BtnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BtnView.h; sourceTree = "<group>"; };
+		C6EFEB8D1F12315300ACB0D3 /* BtnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BtnView.m; sourceTree = "<group>"; };
+		C6EFEB8E1F12315300ACB0D3 /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
+		C6EFEB921F12316000ACB0D3 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
+		C6EFEB931F12316000ACB0D3 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
+		C6EFEB941F12316000ACB0D3 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
+		C6EFEB951F12316000ACB0D3 /* MASConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraint.h; sourceTree = "<group>"; };
+		C6EFEB961F12316000ACB0D3 /* MASConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraint.m; sourceTree = "<group>"; };
+		C6EFEB971F12316000ACB0D3 /* MASConstraintMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraintMaker.h; sourceTree = "<group>"; };
+		C6EFEB981F12316000ACB0D3 /* MASConstraintMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraintMaker.m; sourceTree = "<group>"; };
+		C6EFEB991F12316000ACB0D3 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASLayoutConstraint.h; sourceTree = "<group>"; };
+		C6EFEB9A1F12316000ACB0D3 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASLayoutConstraint.m; sourceTree = "<group>"; };
+		C6EFEB9B1F12316000ACB0D3 /* Masonry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Masonry.h; sourceTree = "<group>"; };
+		C6EFEB9C1F12316000ACB0D3 /* MASUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASUtilities.h; sourceTree = "<group>"; };
+		C6EFEB9D1F12316000ACB0D3 /* MASViewAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewAttribute.h; sourceTree = "<group>"; };
+		C6EFEB9E1F12316000ACB0D3 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
+		C6EFEB9F1F12316000ACB0D3 /* MASViewConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewConstraint.h; sourceTree = "<group>"; };
+		C6EFEBA01F12316000ACB0D3 /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
+		C6EFEBA11F12316000ACB0D3 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		C6EFEBA21F12316000ACB0D3 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		C6EFEBA31F12316000ACB0D3 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		C6EFEBA41F12316000ACB0D3 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		C6EFEBA51F12316000ACB0D3 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		C6EFEBA61F12316000ACB0D3 /* View+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASAdditions.h"; sourceTree = "<group>"; };
+		C6EFEBA71F12316000ACB0D3 /* View+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "View+MASAdditions.m"; sourceTree = "<group>"; };
+		C6EFEBA81F12316000ACB0D3 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		C6EFEBA91F12316000ACB0D3 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		C6EFEBAA1F12316000ACB0D3 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		C6EFEBB61F12317400ACB0D3 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		C6EFEBB71F12317400ACB0D3 /* TBBLStockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBLStockView.h; sourceTree = "<group>"; };
+		C6EFEBB81F12317400ACB0D3 /* TBBTimeLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBTimeLine.h; sourceTree = "<group>"; };
+		C6EFEBB91F12317400ACB0D3 /* TBBTimeLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBBTimeLine.m; sourceTree = "<group>"; };
+		C6EFEBBA1F12317400ACB0D3 /* TBBTimeLineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBTimeLineModel.h; sourceTree = "<group>"; };
+		C6EFEBBB1F12317400ACB0D3 /* TBBTimeLineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBBTimeLineModel.m; sourceTree = "<group>"; };
+		C6EFEBBC1F12317400ACB0D3 /* TBBTimeLinePointModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBTimeLinePointModel.h; sourceTree = "<group>"; };
+		C6EFEBBD1F12317400ACB0D3 /* TBBTimeLinePointModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBBTimeLinePointModel.m; sourceTree = "<group>"; };
+		C6EFEBBE1F12317400ACB0D3 /* TBBTimeLineTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBTimeLineTopView.h; sourceTree = "<group>"; };
+		C6EFEBBF1F12317400ACB0D3 /* TBBTimeLineTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBBTimeLineTopView.m; sourceTree = "<group>"; };
+		C6EFEBC01F12317400ACB0D3 /* TBBTimeLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBTimeLineView.h; sourceTree = "<group>"; };
+		C6EFEBC11F12317400ACB0D3 /* TBBTimeLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBBTimeLineView.m; sourceTree = "<group>"; };
+		C6EFEBC21F12317400ACB0D3 /* TBBTouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBTouchView.h; sourceTree = "<group>"; };
+		C6EFEBC31F12317400ACB0D3 /* TBBTouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBBTouchView.m; sourceTree = "<group>"; };
+		C6EFEBC41F12317400ACB0D3 /* UIColor+HL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HL.h"; sourceTree = "<group>"; };
+		C6EFEBC51F12317400ACB0D3 /* UIColor+HL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HL.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C6EFEB501F12310500ACB0D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6EFEB691F12310500ACB0D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6EFEB741F12310500ACB0D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C6EFEB4A1F12310500ACB0D3 = {
+			isa = PBXGroup;
+			children = (
+				C6EFEB551F12310500ACB0D3 /* TBBStockView */,
+				C6EFEB6F1F12310500ACB0D3 /* TBBStockViewTests */,
+				C6EFEB7A1F12310500ACB0D3 /* TBBStockViewUITests */,
+				C6EFEB541F12310500ACB0D3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C6EFEB541F12310500ACB0D3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C6EFEB531F12310500ACB0D3 /* TBBStockView.app */,
+				C6EFEB6C1F12310500ACB0D3 /* TBBStockViewTests.xctest */,
+				C6EFEB771F12310500ACB0D3 /* TBBStockViewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C6EFEB551F12310500ACB0D3 /* TBBStockView */ = {
+			isa = PBXGroup;
+			children = (
+				C6EFEBB51F12317400ACB0D3 /* Source */,
+				C6EFEB911F12316000ACB0D3 /* Masonry */,
+				C6EFEB8C1F12315300ACB0D3 /* BtnView.h */,
+				C6EFEB8D1F12315300ACB0D3 /* BtnView.m */,
+				C6EFEB591F12310500ACB0D3 /* AppDelegate.h */,
+				C6EFEB5A1F12310500ACB0D3 /* AppDelegate.m */,
+				C6EFEB891F12314000ACB0D3 /* ViewController.h */,
+				C6EFEB8A1F12314000ACB0D3 /* ViewController.m */,
+				C6EFEB5F1F12310500ACB0D3 /* Main.storyboard */,
+				C6EFEB621F12310500ACB0D3 /* Assets.xcassets */,
+				C6EFEB641F12310500ACB0D3 /* LaunchScreen.storyboard */,
+				C6EFEB8E1F12315300ACB0D3 /* data.plist */,
+				C6EFEB671F12310500ACB0D3 /* Info.plist */,
+				C6EFEB561F12310500ACB0D3 /* Supporting Files */,
+			);
+			path = TBBStockView;
+			sourceTree = "<group>";
+		};
+		C6EFEB561F12310500ACB0D3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C6EFEB571F12310500ACB0D3 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C6EFEB6F1F12310500ACB0D3 /* TBBStockViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				C6EFEB701F12310500ACB0D3 /* TBBStockViewTests.m */,
+				C6EFEB721F12310500ACB0D3 /* Info.plist */,
+			);
+			path = TBBStockViewTests;
+			sourceTree = "<group>";
+		};
+		C6EFEB7A1F12310500ACB0D3 /* TBBStockViewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C6EFEB7B1F12310500ACB0D3 /* TBBStockViewUITests.m */,
+				C6EFEB7D1F12310500ACB0D3 /* Info.plist */,
+			);
+			path = TBBStockViewUITests;
+			sourceTree = "<group>";
+		};
+		C6EFEB911F12316000ACB0D3 /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				C6EFEB921F12316000ACB0D3 /* MASCompositeConstraint.h */,
+				C6EFEB931F12316000ACB0D3 /* MASCompositeConstraint.m */,
+				C6EFEB941F12316000ACB0D3 /* MASConstraint+Private.h */,
+				C6EFEB951F12316000ACB0D3 /* MASConstraint.h */,
+				C6EFEB961F12316000ACB0D3 /* MASConstraint.m */,
+				C6EFEB971F12316000ACB0D3 /* MASConstraintMaker.h */,
+				C6EFEB981F12316000ACB0D3 /* MASConstraintMaker.m */,
+				C6EFEB991F12316000ACB0D3 /* MASLayoutConstraint.h */,
+				C6EFEB9A1F12316000ACB0D3 /* MASLayoutConstraint.m */,
+				C6EFEB9B1F12316000ACB0D3 /* Masonry.h */,
+				C6EFEB9C1F12316000ACB0D3 /* MASUtilities.h */,
+				C6EFEB9D1F12316000ACB0D3 /* MASViewAttribute.h */,
+				C6EFEB9E1F12316000ACB0D3 /* MASViewAttribute.m */,
+				C6EFEB9F1F12316000ACB0D3 /* MASViewConstraint.h */,
+				C6EFEBA01F12316000ACB0D3 /* MASViewConstraint.m */,
+				C6EFEBA11F12316000ACB0D3 /* NSArray+MASAdditions.h */,
+				C6EFEBA21F12316000ACB0D3 /* NSArray+MASAdditions.m */,
+				C6EFEBA31F12316000ACB0D3 /* NSArray+MASShorthandAdditions.h */,
+				C6EFEBA41F12316000ACB0D3 /* NSLayoutConstraint+MASDebugAdditions.h */,
+				C6EFEBA51F12316000ACB0D3 /* NSLayoutConstraint+MASDebugAdditions.m */,
+				C6EFEBA61F12316000ACB0D3 /* View+MASAdditions.h */,
+				C6EFEBA71F12316000ACB0D3 /* View+MASAdditions.m */,
+				C6EFEBA81F12316000ACB0D3 /* View+MASShorthandAdditions.h */,
+				C6EFEBA91F12316000ACB0D3 /* ViewController+MASAdditions.h */,
+				C6EFEBAA1F12316000ACB0D3 /* ViewController+MASAdditions.m */,
+			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+		C6EFEBB51F12317400ACB0D3 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				C6EFEBB61F12317400ACB0D3 /* Common.h */,
+				C6EFEBB71F12317400ACB0D3 /* TBBLStockView.h */,
+				C6EFEBB81F12317400ACB0D3 /* TBBTimeLine.h */,
+				C6EFEBB91F12317400ACB0D3 /* TBBTimeLine.m */,
+				C6EFEBBA1F12317400ACB0D3 /* TBBTimeLineModel.h */,
+				C6EFEBBB1F12317400ACB0D3 /* TBBTimeLineModel.m */,
+				C6EFEBBC1F12317400ACB0D3 /* TBBTimeLinePointModel.h */,
+				C6EFEBBD1F12317400ACB0D3 /* TBBTimeLinePointModel.m */,
+				C6EFEBBE1F12317400ACB0D3 /* TBBTimeLineTopView.h */,
+				C6EFEBBF1F12317400ACB0D3 /* TBBTimeLineTopView.m */,
+				C6EFEBC01F12317400ACB0D3 /* TBBTimeLineView.h */,
+				C6EFEBC11F12317400ACB0D3 /* TBBTimeLineView.m */,
+				C6EFEBC21F12317400ACB0D3 /* TBBTouchView.h */,
+				C6EFEBC31F12317400ACB0D3 /* TBBTouchView.m */,
+				C6EFEBC41F12317400ACB0D3 /* UIColor+HL.h */,
+				C6EFEBC51F12317400ACB0D3 /* UIColor+HL.m */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C6EFEB521F12310500ACB0D3 /* TBBStockView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6EFEB801F12310500ACB0D3 /* Build configuration list for PBXNativeTarget "TBBStockView" */;
+			buildPhases = (
+				C6EFEB4F1F12310500ACB0D3 /* Sources */,
+				C6EFEB501F12310500ACB0D3 /* Frameworks */,
+				C6EFEB511F12310500ACB0D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TBBStockView;
+			productName = TBBStockView;
+			productReference = C6EFEB531F12310500ACB0D3 /* TBBStockView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C6EFEB6B1F12310500ACB0D3 /* TBBStockViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6EFEB831F12310500ACB0D3 /* Build configuration list for PBXNativeTarget "TBBStockViewTests" */;
+			buildPhases = (
+				C6EFEB681F12310500ACB0D3 /* Sources */,
+				C6EFEB691F12310500ACB0D3 /* Frameworks */,
+				C6EFEB6A1F12310500ACB0D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C6EFEB6E1F12310500ACB0D3 /* PBXTargetDependency */,
+			);
+			name = TBBStockViewTests;
+			productName = TBBStockViewTests;
+			productReference = C6EFEB6C1F12310500ACB0D3 /* TBBStockViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C6EFEB761F12310500ACB0D3 /* TBBStockViewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6EFEB861F12310500ACB0D3 /* Build configuration list for PBXNativeTarget "TBBStockViewUITests" */;
+			buildPhases = (
+				C6EFEB731F12310500ACB0D3 /* Sources */,
+				C6EFEB741F12310500ACB0D3 /* Frameworks */,
+				C6EFEB751F12310500ACB0D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C6EFEB791F12310500ACB0D3 /* PBXTargetDependency */,
+			);
+			name = TBBStockViewUITests;
+			productName = TBBStockViewUITests;
+			productReference = C6EFEB771F12310500ACB0D3 /* TBBStockViewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C6EFEB4B1F12310500ACB0D3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "唐彬彬";
+				TargetAttributes = {
+					C6EFEB521F12310500ACB0D3 = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = C4P27ZTGM4;
+						ProvisioningStyle = Automatic;
+					};
+					C6EFEB6B1F12310500ACB0D3 = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = C4P27ZTGM4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C6EFEB521F12310500ACB0D3;
+					};
+					C6EFEB761F12310500ACB0D3 = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = C4P27ZTGM4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C6EFEB521F12310500ACB0D3;
+					};
+				};
+			};
+			buildConfigurationList = C6EFEB4E1F12310500ACB0D3 /* Build configuration list for PBXProject "TBBStockView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C6EFEB4A1F12310500ACB0D3;
+			productRefGroup = C6EFEB541F12310500ACB0D3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C6EFEB521F12310500ACB0D3 /* TBBStockView */,
+				C6EFEB6B1F12310500ACB0D3 /* TBBStockViewTests */,
+				C6EFEB761F12310500ACB0D3 /* TBBStockViewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C6EFEB511F12310500ACB0D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6EFEB661F12310500ACB0D3 /* LaunchScreen.storyboard in Resources */,
+				C6EFEB631F12310500ACB0D3 /* Assets.xcassets in Resources */,
+				C6EFEB901F12315300ACB0D3 /* data.plist in Resources */,
+				C6EFEB611F12310500ACB0D3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6EFEB6A1F12310500ACB0D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6EFEB751F12310500ACB0D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C6EFEB4F1F12310500ACB0D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6EFEBAD1F12316000ACB0D3 /* MASConstraintMaker.m in Sources */,
+				C6EFEB8B1F12314000ACB0D3 /* ViewController.m in Sources */,
+				C6EFEBC61F12317400ACB0D3 /* TBBTimeLine.m in Sources */,
+				C6EFEB5B1F12310500ACB0D3 /* AppDelegate.m in Sources */,
+				C6EFEBAC1F12316000ACB0D3 /* MASConstraint.m in Sources */,
+				C6EFEBB41F12316000ACB0D3 /* ViewController+MASAdditions.m in Sources */,
+				C6EFEBCA1F12317400ACB0D3 /* TBBTimeLineView.m in Sources */,
+				C6EFEBAE1F12316000ACB0D3 /* MASLayoutConstraint.m in Sources */,
+				C6EFEBB11F12316000ACB0D3 /* NSArray+MASAdditions.m in Sources */,
+				C6EFEBC91F12317400ACB0D3 /* TBBTimeLineTopView.m in Sources */,
+				C6EFEBB01F12316000ACB0D3 /* MASViewConstraint.m in Sources */,
+				C6EFEBCB1F12317400ACB0D3 /* TBBTouchView.m in Sources */,
+				C6EFEBAF1F12316000ACB0D3 /* MASViewAttribute.m in Sources */,
+				C6EFEBB31F12316000ACB0D3 /* View+MASAdditions.m in Sources */,
+				C6EFEB581F12310500ACB0D3 /* main.m in Sources */,
+				C6EFEBC81F12317400ACB0D3 /* TBBTimeLinePointModel.m in Sources */,
+				C6EFEB8F1F12315300ACB0D3 /* BtnView.m in Sources */,
+				C6EFEBC71F12317400ACB0D3 /* TBBTimeLineModel.m in Sources */,
+				C6EFEBAB1F12316000ACB0D3 /* MASCompositeConstraint.m in Sources */,
+				C6EFEBB21F12316000ACB0D3 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				C6EFEBCC1F12317400ACB0D3 /* UIColor+HL.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6EFEB681F12310500ACB0D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6EFEB711F12310500ACB0D3 /* TBBStockViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6EFEB731F12310500ACB0D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6EFEB7C1F12310500ACB0D3 /* TBBStockViewUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C6EFEB6E1F12310500ACB0D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C6EFEB521F12310500ACB0D3 /* TBBStockView */;
+			targetProxy = C6EFEB6D1F12310500ACB0D3 /* PBXContainerItemProxy */;
+		};
+		C6EFEB791F12310500ACB0D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C6EFEB521F12310500ACB0D3 /* TBBStockView */;
+			targetProxy = C6EFEB781F12310500ACB0D3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C6EFEB5F1F12310500ACB0D3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C6EFEB601F12310500ACB0D3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C6EFEB641F12310500ACB0D3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C6EFEB651F12310500ACB0D3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C6EFEB7E1F12310500ACB0D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C6EFEB7F1F12310500ACB0D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C6EFEB811F12310500ACB0D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = C4P27ZTGM4;
+				INFOPLIST_FILE = TBBStockView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tbb.TBBStockView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C6EFEB821F12310500ACB0D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = C4P27ZTGM4;
+				INFOPLIST_FILE = TBBStockView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tbb.TBBStockView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C6EFEB841F12310500ACB0D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = C4P27ZTGM4;
+				INFOPLIST_FILE = TBBStockViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tbb.TBBStockViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TBBStockView.app/TBBStockView";
+			};
+			name = Debug;
+		};
+		C6EFEB851F12310500ACB0D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = C4P27ZTGM4;
+				INFOPLIST_FILE = TBBStockViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tbb.TBBStockViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TBBStockView.app/TBBStockView";
+			};
+			name = Release;
+		};
+		C6EFEB871F12310500ACB0D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = C4P27ZTGM4;
+				INFOPLIST_FILE = TBBStockViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tbb.TBBStockViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TBBStockView;
+			};
+			name = Debug;
+		};
+		C6EFEB881F12310500ACB0D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = C4P27ZTGM4;
+				INFOPLIST_FILE = TBBStockViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tbb.TBBStockViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TBBStockView;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C6EFEB4E1F12310500ACB0D3 /* Build configuration list for PBXProject "TBBStockView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6EFEB7E1F12310500ACB0D3 /* Debug */,
+				C6EFEB7F1F12310500ACB0D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C6EFEB801F12310500ACB0D3 /* Build configuration list for PBXNativeTarget "TBBStockView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6EFEB811F12310500ACB0D3 /* Debug */,
+				C6EFEB821F12310500ACB0D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C6EFEB831F12310500ACB0D3 /* Build configuration list for PBXNativeTarget "TBBStockViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6EFEB841F12310500ACB0D3 /* Debug */,
+				C6EFEB851F12310500ACB0D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C6EFEB861F12310500ACB0D3 /* Build configuration list for PBXNativeTarget "TBBStockViewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6EFEB871F12310500ACB0D3 /* Debug */,
+				C6EFEB881F12310500ACB0D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C6EFEB4B1F12310500ACB0D3 /* Project object */;
+}
