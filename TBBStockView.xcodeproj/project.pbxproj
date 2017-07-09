@@ -99,7 +99,7 @@
 		C6EFEBA91F12316000ACB0D3 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		C6EFEBAA1F12316000ACB0D3 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
 		C6EFEBB61F12317400ACB0D3 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
-		C6EFEBB71F12317400ACB0D3 /* TBBLStockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBLStockView.h; sourceTree = "<group>"; };
+		C6EFEBB71F12317400ACB0D3 /* TBBStockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBStockView.h; sourceTree = "<group>"; };
 		C6EFEBB81F12317400ACB0D3 /* TBBTimeLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBTimeLine.h; sourceTree = "<group>"; };
 		C6EFEBB91F12317400ACB0D3 /* TBBTimeLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBBTimeLine.m; sourceTree = "<group>"; };
 		C6EFEBBA1F12317400ACB0D3 /* TBBTimeLineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBTimeLineModel.h; sourceTree = "<group>"; };
@@ -244,7 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				C6EFEBB61F12317400ACB0D3 /* Common.h */,
-				C6EFEBB71F12317400ACB0D3 /* TBBLStockView.h */,
+				C6EFEBB71F12317400ACB0D3 /* TBBStockView.h */,
 				C6EFEBB81F12317400ACB0D3 /* TBBTimeLine.h */,
 				C6EFEBB91F12317400ACB0D3 /* TBBTimeLine.m */,
 				C6EFEBBA1F12317400ACB0D3 /* TBBTimeLineModel.h */,
@@ -660,6 +660,7 @@
 				C6EFEB821F12310500ACB0D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C6EFEB831F12310500ACB0D3 /* Build configuration list for PBXNativeTarget "TBBStockViewTests" */ = {
 			isa = XCConfigurationList;
@@ -668,6 +669,7 @@
 				C6EFEB851F12310500ACB0D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C6EFEB861F12310500ACB0D3 /* Build configuration list for PBXNativeTarget "TBBStockViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -676,6 +678,7 @@
 				C6EFEB881F12310500ACB0D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

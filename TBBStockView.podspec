@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "TBBStockView"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "iOS股票证券走势图--分时图"
 
   s.description  = <<-DESC
