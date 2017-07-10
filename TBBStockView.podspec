@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/HLTangbinbin/TBBStockView.git", :tag => "#{s.version}" }
 
   s.source_files  = 'TBBStockView/source/*.{h,m}'
-  s.resources = "TBBStockView/Resources/*.*"
+  s.resources = "TBBStockView/Resource/*.*"
   s.requires_arc = true
 
   s.dependency "Masonry"
