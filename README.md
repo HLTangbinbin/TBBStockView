@@ -1,5 +1,5 @@
 # TBBStockView
-##iOS  股票走势图(分时图,K线图)
+##iOS  股票走势图(分时图,K线图) 
 ###在绘制虚实线，走势图背景时使用了更简洁的方法，理解其中的实现原理按照自己的思路封装收获更多----共同学习，欢迎提出宝贵的意见和更好的方法
 
 ![License MIT](https://img.shields.io/badge/license-MIT-green.svg?style=flat)
@@ -10,7 +10,7 @@
 
 
 ![image](/TBBStockView/TBBStockView.gif)
-
+        
 
 
 Installation
@@ -28,4 +28,14 @@ Installation
 1. Download all the files in the TBBStockView subdirectory.
 2. Add the source files to your Xcode project.
 3. Import `TBBStockView.h`.
+
+### How to use
+1.Import `TBBStockView.h`.
+```
+ TBBTimeLineView *lineView = [[TBBTimeLineView alloc]initWithFrame:CGRectMake(0, 114.0f, KScreenWidth, 300.f) withDataArr:self.dataArr];
+    self.lineView = lineView;
+    [self.view addSubview:self.lineView];
+```
+2.you should sure that the self.dataArr input must match the model,Specific please see the ViewController
+
 
