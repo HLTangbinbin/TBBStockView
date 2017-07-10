@@ -64,7 +64,10 @@
 }
 -(UIImageView *)pointView{
     if (!_pointView) {
-        _pointView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"dian_"]];
+        NSString * bundlePath = [[NSBundle mainBundle] pathForResource: @"images"ofType :@"bundle"];
+        NSBundle *resourceBundle = [NSBundle bundleWithPath:bundlePath];
+        NSString *img_path = [resourceBundle pathForResource:@"dian_@2x" ofType:@"png"];
+        _pointView = [[UIImageView alloc]initWithImage:[UIImage imageWithContentsOfFile:img_path]];
         [self addSubview:_pointView];
         [_pointView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.width.mas_equalTo(8.f);
@@ -127,6 +130,9 @@
     if (UIGestureRecognizerStateChanged == longPress.state || UIGestureRecognizerStateBegan == longPress.state) {
         CGPoint location = [longPress locationInView:self];
         //获取手势位置计算，选取最近的数据里的坐标点
+        if (self.pointArray.count <= 0) {
+            return;
+        }
         CGPoint point = [self getLongPressModelPostionWithXPostion:location.x];
         NSLog(@"%f,%f",point.x,point.y);
         //绘制十字光标线
@@ -147,8 +153,13 @@
         self.pointView.layer.masksToBounds= YES;
         self.pointView.center = CGPointMake(point.x, point.y);
         //获取到模型数据,准备赋值
-        TBBTimeLineModel *model = self.dataArray[self.curentModelIndex];
-        [self addSlideViewWhenMovedWithModel:model andTmpK:point];
+        if (self.dataArray && self.dataArray != nil) {
+            TBBTimeLineModel *model = self.dataArray[self.curentModelIndex];
+            [self addSlideViewWhenMovedWithModel:model andTmpK:point];
+        }else {
+        
+            return;
+        }
     }
     
     if(longPress.state == UIGestureRecognizerStateEnded)
@@ -169,35 +180,39 @@
 
 -(CGPoint)getLongPressModelPostionWithXPostion:(CGFloat)xPostion
 {
-    for (NSInteger i = 0; i<self.pointArray.count; i++) {
-        TBBTimeLinePointModel *model = self.pointArray[i];
-        if (i+1 < self.pointArray.count) {
-            TBBTimeLinePointModel *nextPointModel = self.pointArray[i+1];
-            if (xPostion >= model.xPosition && xPostion < nextPointModel.xPosition)
-            {
-                if (fabs(xPostion-model.xPosition)<fabs(xPostion-nextPointModel.xPosition)) {
-                    _curentModelIndex = i;
-                    return CGPointMake(model.xPosition , model.yPosition);
-                }else{
-                    _curentModelIndex = i+1;
-                    return CGPointMake(nextPointModel.xPosition , nextPointModel.yPosition);
+    if (self.pointArray.count > 0) {
+        
+        for (NSInteger i = 0; i<self.pointArray.count; i++) {
+            TBBTimeLinePointModel *model = self.pointArray[i];
+            if (i+1 < self.pointArray.count) {
+                TBBTimeLinePointModel *nextPointModel = self.pointArray[i+1];
+                if (xPostion >= model.xPosition && xPostion < nextPointModel.xPosition)
+                {
+                    if (fabs(xPostion-model.xPosition)<fabs(xPostion-nextPointModel.xPosition)) {
+                        _curentModelIndex = i;
+                        return CGPointMake(model.xPosition , model.yPosition);
+                    }else{
+                        _curentModelIndex = i+1;
+                        return CGPointMake(nextPointModel.xPosition , nextPointModel.yPosition);
+                    }
                 }
             }
         }
+        
+        TBBTimeLinePointModel *lastPoint = self.pointArray.lastObject;
+        if (xPostion >= lastPoint.xPosition)
+        {
+            _curentModelIndex = self.pointArray.count - 1;
+            return CGPointMake(lastPoint.xPosition, lastPoint.yPosition);
+        }
+        TBBTimeLinePointModel *firstPoint = self.pointArray.firstObject;
+        if (xPostion <= firstPoint.xPosition)
+        {
+            _curentModelIndex = 0;
+            return CGPointMake(firstPoint.xPosition, firstPoint.yPosition);
+        }
     }
     
-    TBBTimeLinePointModel *lastPoint = self.pointArray.lastObject;
-    if (xPostion >= lastPoint.xPosition)
-    {
-        _curentModelIndex = self.pointArray.count - 1;
-        return CGPointMake(lastPoint.xPosition, lastPoint.yPosition);
-    }
-    TBBTimeLinePointModel *firstPoint = self.pointArray.firstObject;
-    if (xPostion <= firstPoint.xPosition)
-    {
-        _curentModelIndex = 0;
-        return CGPointMake(firstPoint.xPosition, firstPoint.yPosition);
-    }
     return CGPointZero;
 }
 

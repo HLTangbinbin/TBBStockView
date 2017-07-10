@@ -38,7 +38,7 @@
  @param lineWidth 线宽
  */
 -(void)drawTimeLineWithPositionArray:(NSArray *)pointArray withLineColor:(UIColor *)lineColor andLineWidth:(CGFloat)lineWidth{
-    if (pointArray == nil) {
+    if (pointArray.count <= 0) {
         return;
     };
     UIBezierPath *path = [UIBezierPath bezierPath];

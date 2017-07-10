@@ -84,6 +84,7 @@ CGFloat const HYStockChartTimeLineGridWidth = 0.5;
 @property (nonatomic, strong) UIBezierPath    *drawPath;//绘制点
 @property (nonatomic,assign) CGFloat maxPrice ;// 最高点
 @property (nonatomic,assign) CGFloat minPrice ;// 最低点
+@property (nonatomic,assign) CGFloat averPrice ;// 均值点
 @property (nonatomic,assign) CGFloat endPrice ;// 收盘点
 @property (nonatomic, assign) kLineType lineType;
 @property (nonatomic ,assign) kLineViewType lineViewType;
@@ -111,7 +112,12 @@ CGFloat const HYStockChartTimeLineGridWidth = 0.5;
 }
 -(UIImageView *)pointView{
     if (!_pointView) {
-        _pointView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"dian_"]];
+        NSString * bundlePath = [[NSBundle mainBundle] pathForResource: @"images"ofType :@"bundle"];
+        NSBundle *resourceBundle = [NSBundle bundleWithPath:bundlePath];
+        
+        NSString *img_path = [resourceBundle pathForResource:@"dian_@2x" ofType:@"png"];
+        _pointView = [[UIImageView alloc]initWithImage:[UIImage imageWithContentsOfFile:img_path]];
+    
         [_pointView sizeToFit];
         [self addSubview:_pointView];
     }
@@ -146,9 +152,12 @@ CGFloat const HYStockChartTimeLineGridWidth = 0.5;
     TBBTimeLine *timeLine = [[TBBTimeLine alloc]initWithContext:context];
     [timeLine drawTimeLineWithPositionArray:self.pointArray withLineColor:[UIColor blueColor] andLineWidth:1.0f];
     //绘制呼吸灯view去最后一个点的坐标
-    TBBTimeLinePointModel *lastObj = self.pointArray.lastObject;
-    self.pointView.frame = CGRectMake(lastObj.xPosition-12/2.f, lastObj.yPosition-10/2.f, 12.f, 12.f);
-    [self.pointView.layer addAnimation:[self groups] forKey:@"aAlpha"];
+    if (self.pointArray.count > 0) {
+        
+        TBBTimeLinePointModel *lastObj = self.pointArray.lastObject;
+        self.pointView.frame = CGRectMake(lastObj.xPosition-12/2.f, lastObj.yPosition-10/2.f, 12.f, 12.f);
+        [self.pointView.layer addAnimation:[self groups] forKey:@"aAlpha"];
+    }
     //使用CAShapeLayer绘制背景边框及虚实线
 //    [self drawLineWithShapeLayerRect];
 //    使用Contex绘制背景边框及虚实线
@@ -237,9 +246,9 @@ CGFloat const HYStockChartTimeLineGridWidth = 0.5;
     
     if (_lineViewType == kLineViewTypeTime) {
 
-        NSString *topStr = @"5.56";
-        NSString *centerStr = @"5.46";
-        NSString *bottomStr = @"5.36";
+        NSString *topStr = [NSString stringWithFormat:@"%.2f",self.maxPrice];
+        NSString *centerStr = [NSString stringWithFormat:@"%.2f",self.averPrice];
+        NSString *bottomStr = [NSString stringWithFormat:@"%.2f",self.minPrice];
         CGSize  strSize = [topStr sizeWithAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:13]}];
         [topStr drawInRect:kVerticalTextTopRect withAttributes:[self fontSize:13 andTextColor:[UIColor colorWithHexString:@"fb4747"] textAlignment:NSTextAlignmentLeft]];
         [centerStr drawInRect:kVerticalTextCenterRect withAttributes:[self fontSize:13 andTextColor:[UIColor colorWithHexString:@"333333"] textAlignment:NSTextAlignmentLeft]];
@@ -268,29 +277,38 @@ CGFloat const HYStockChartTimeLineGridWidth = 0.5;
         NSLog(@"%f",unitX);
         //计算y轴每一个点所占单元
         NSMutableArray *pointArr = [NSMutableArray array];
-        [self.dataArr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            TBBTimeLineModel *lineModel = (TBBTimeLineModel *)obj;
+        if (self.dataArr.count > 0) {
             
-            offset = offset >fabs(lineModel.preClosePx-lineModel.lastPirce) ? offset:fabs(lineModel.preClosePx-lineModel.lastPirce);
-        }];
-        self.maxPrice =((TBBTimeLineModel *)[_dataArr firstObject]).preClosePx  + offset;
-        self.minPrice =((TBBTimeLineModel*)[_dataArr firstObject]).preClosePx  - offset;
- 
-        CGFloat unitY = (self.maxPrice - self.minPrice)/(maxY-minY);
-        //遍历当前的点坐标放入数组
-        [self.dataArr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            TBBTimeLineModel *lineModel = (TBBTimeLineModel *)obj;
-            CGFloat x = idx*unitX+kWidthMargin;
-            //y值考虑最大可能超出，加上绘制的线宽和矩形框的线宽
-            CGFloat y = (maxY-minY)-(lineModel.lastPirce - self.minPrice)/unitY+kHeightMargin+HYStockChartTimeLineGridWidth+1.0f;
-            TBBTimeLinePointModel *pointModel = [TBBTimeLinePointModel initPositon:x yPosition:y];
-            [pointArr addObject:pointModel];
-        }];
-   
-        self.pointArray = pointArr;
+            [self.dataArr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                TBBTimeLineModel *lineModel = (TBBTimeLineModel *)obj;
+                
+                offset = offset >fabs(lineModel.preClosePx-lineModel.lastPirce) ? offset:fabs(lineModel.preClosePx-lineModel.lastPirce);
+            }];
+            self.maxPrice =((TBBTimeLineModel *)[_dataArr firstObject]).preClosePx  + offset;
+            self.minPrice =((TBBTimeLineModel*)[_dataArr firstObject]).preClosePx  - offset;
+            self.averPrice = (self.maxPrice + self.minPrice)/2;
+            CGFloat unitY = (self.maxPrice - self.minPrice)/(maxY-minY);
+            if (!self.dataArr && self.dataArr == nil) {
+                return nil;
+            }else {
+                
+                //遍历当前的点坐标放入数组
+                [self.dataArr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                    TBBTimeLineModel *lineModel = (TBBTimeLineModel *)obj;
+                    CGFloat x = idx*unitX+kWidthMargin;
+                    //y值考虑最大可能超出，加上绘制的线宽和矩形框的线宽
+                    CGFloat y = (maxY-minY)-(lineModel.lastPirce - self.minPrice)/unitY+kHeightMargin+HYStockChartTimeLineGridWidth+1.0f;
+                    TBBTimeLinePointModel *pointModel = [TBBTimeLinePointModel initPositon:x yPosition:y];
+                    [pointArr addObject:pointModel];
+                }];
+                
+                self.pointArray = pointArr;
+            }
         }
-    return self.pointArray;
+        return self.pointArray;
+    }
 
+    return self.pointArray;
 }
 /**
  设置需要绘制的字体样式

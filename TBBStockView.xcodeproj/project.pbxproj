@@ -34,6 +34,7 @@
 		C6EFEBCA1F12317400ACB0D3 /* TBBTimeLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EFEBC11F12317400ACB0D3 /* TBBTimeLineView.m */; };
 		C6EFEBCB1F12317400ACB0D3 /* TBBTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EFEBC31F12317400ACB0D3 /* TBBTouchView.m */; };
 		C6EFEBCC1F12317400ACB0D3 /* UIColor+HL.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EFEBC51F12317400ACB0D3 /* UIColor+HL.m */; };
+		C6EFEBD21F1327BD00ACB0D3 /* images.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C6EFEBD11F1327BD00ACB0D3 /* images.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +115,7 @@
 		C6EFEBC31F12317400ACB0D3 /* TBBTouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBBTouchView.m; sourceTree = "<group>"; };
 		C6EFEBC41F12317400ACB0D3 /* UIColor+HL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HL.h"; sourceTree = "<group>"; };
 		C6EFEBC51F12317400ACB0D3 /* UIColor+HL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HL.m"; sourceTree = "<group>"; };
+		C6EFEBD11F1327BD00ACB0D3 /* images.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = images.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 		C6EFEB551F12310500ACB0D3 /* TBBStockView */ = {
 			isa = PBXGroup;
 			children = (
+				C6EFEBD01F1327BD00ACB0D3 /* Resource */,
 				C6EFEBB51F12317400ACB0D3 /* Source */,
 				C6EFEB911F12316000ACB0D3 /* Masonry */,
 				C6EFEB8C1F12315300ACB0D3 /* BtnView.h */,
@@ -261,6 +264,14 @@
 				C6EFEBC51F12317400ACB0D3 /* UIColor+HL.m */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		C6EFEBD01F1327BD00ACB0D3 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				C6EFEBD11F1327BD00ACB0D3 /* images.bundle */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,6 +383,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6EFEBD21F1327BD00ACB0D3 /* images.bundle in Resources */,
 				C6EFEB661F12310500ACB0D3 /* LaunchScreen.storyboard in Resources */,
 				C6EFEB631F12310500ACB0D3 /* Assets.xcassets in Resources */,
 				C6EFEB901F12315300ACB0D3 /* data.plist in Resources */,

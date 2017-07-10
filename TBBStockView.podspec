@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "TBBStockView"
-  s.version      = "1.0.2"
+  s.version      = "1.0.3"
   s.summary      = "iOS股票证券走势图--分时图"
 
   s.description  = <<-DESC
@@ -19,6 +19,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/HLTangbinbin/TBBStockView.git", :tag => "#{s.version}" }
 
   s.source_files  = 'TBBStockView/source/*.{h,m}'
+  s.resources = "TBBStockView/Resources/*.*"
   s.requires_arc = true
 
   s.dependency "Masonry"
