@@ -7,8 +7,8 @@
 //
 #import "Common.h"
 #import "UIColor+HL.h"
-#import "TBBTimeLineView.h"
 #import "TBBTimeLine.h"
+#import "TBBTimeLineView.h"
 #import "TBBTimeLineTopView.h"
 #import "TBBTimeLineBottom.h"
 #import "TBBTimeLineBottomView.h"

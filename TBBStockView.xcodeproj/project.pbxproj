@@ -9,15 +9,15 @@
 /* Begin PBXBuildFile section */
 		C67791121F37A4AA0095BFE6 /* UIColor+HL.m in Sources */ = {isa = PBXBuildFile; fileRef = C67791111F37A4AA0095BFE6 /* UIColor+HL.m */; };
 		C68EF1A91F3A9B6F009FD83C /* TBBKLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = C68EF1A81F3A9B6F009FD83C /* TBBKLineView.m */; };
-		C68EF1C51F457731009FD83C /* TBBTimeLineBottom.m in Sources */ = {isa = PBXBuildFile; fileRef = C68EF1B31F457731009FD83C /* TBBTimeLineBottom.m */; };
-		C68EF1C61F457731009FD83C /* TBBTimeLineBottomPointModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C68EF1B51F457731009FD83C /* TBBTimeLineBottomPointModel.m */; };
-		C68EF1C71F457731009FD83C /* TBBTimeLineBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = C68EF1B71F457731009FD83C /* TBBTimeLineBottomView.m */; };
-		C68EF1C81F457731009FD83C /* TBBTimeLineTop.m in Sources */ = {isa = PBXBuildFile; fileRef = C68EF1BA1F457731009FD83C /* TBBTimeLineTop.m */; };
-		C68EF1C91F457731009FD83C /* TBBTimeLineTopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C68EF1BC1F457731009FD83C /* TBBTimeLineTopModel.m */; };
-		C68EF1CA1F457731009FD83C /* TBBTimeLineTopPointModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C68EF1BE1F457731009FD83C /* TBBTimeLineTopPointModel.m */; };
-		C68EF1CB1F457731009FD83C /* TBBTimeLineTopTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = C68EF1C01F457731009FD83C /* TBBTimeLineTopTouchView.m */; };
-		C68EF1CC1F457731009FD83C /* TBBTimeLineTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = C68EF1C21F457731009FD83C /* TBBTimeLineTopView.m */; };
-		C68EF1CD1F457731009FD83C /* TBBTimeLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = C68EF1C41F457731009FD83C /* TBBTimeLineView.m */; };
+		C68EF1E31F457B27009FD83C /* TBBTimeLineBottom.m in Sources */ = {isa = PBXBuildFile; fileRef = C68EF1D11F457B27009FD83C /* TBBTimeLineBottom.m */; };
+		C68EF1E41F457B27009FD83C /* TBBTimeLineBottomPointModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C68EF1D31F457B27009FD83C /* TBBTimeLineBottomPointModel.m */; };
+		C68EF1E51F457B27009FD83C /* TBBTimeLineBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = C68EF1D51F457B27009FD83C /* TBBTimeLineBottomView.m */; };
+		C68EF1E61F457B27009FD83C /* TBBTimeLineTop.m in Sources */ = {isa = PBXBuildFile; fileRef = C68EF1D81F457B27009FD83C /* TBBTimeLineTop.m */; };
+		C68EF1E71F457B27009FD83C /* TBBTimeLineTopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C68EF1DA1F457B27009FD83C /* TBBTimeLineTopModel.m */; };
+		C68EF1E81F457B27009FD83C /* TBBTimeLineTopPointModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C68EF1DC1F457B27009FD83C /* TBBTimeLineTopPointModel.m */; };
+		C68EF1E91F457B27009FD83C /* TBBTimeLineTopTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = C68EF1DE1F457B27009FD83C /* TBBTimeLineTopTouchView.m */; };
+		C68EF1EA1F457B27009FD83C /* TBBTimeLineTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = C68EF1E01F457B27009FD83C /* TBBTimeLineTopView.m */; };
+		C68EF1EB1F457B27009FD83C /* TBBTimeLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = C68EF1E21F457B27009FD83C /* TBBTimeLineView.m */; };
 		C6EFEB581F12310500ACB0D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EFEB571F12310500ACB0D3 /* main.m */; };
 		C6EFEB5B1F12310500ACB0D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EFEB5A1F12310500ACB0D3 /* AppDelegate.m */; };
 		C6EFEB611F12310500ACB0D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6EFEB5F1F12310500ACB0D3 /* Main.storyboard */; };
@@ -66,24 +66,24 @@
 		C67791421F37B36E0095BFE6 /* CommonEnum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonEnum.h; sourceTree = "<group>"; };
 		C68EF1A71F3A9B6F009FD83C /* TBBKLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBKLineView.h; sourceTree = "<group>"; };
 		C68EF1A81F3A9B6F009FD83C /* TBBKLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBBKLineView.m; sourceTree = "<group>"; };
-		C68EF1B21F457731009FD83C /* TBBTimeLineBottom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBTimeLineBottom.h; sourceTree = "<group>"; };
-		C68EF1B31F457731009FD83C /* TBBTimeLineBottom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBBTimeLineBottom.m; sourceTree = "<group>"; };
-		C68EF1B41F457731009FD83C /* TBBTimeLineBottomPointModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBTimeLineBottomPointModel.h; sourceTree = "<group>"; };
-		C68EF1B51F457731009FD83C /* TBBTimeLineBottomPointModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBBTimeLineBottomPointModel.m; sourceTree = "<group>"; };
-		C68EF1B61F457731009FD83C /* TBBTimeLineBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBTimeLineBottomView.h; sourceTree = "<group>"; };
-		C68EF1B71F457731009FD83C /* TBBTimeLineBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBBTimeLineBottomView.m; sourceTree = "<group>"; };
-		C68EF1B91F457731009FD83C /* TBBTimeLineTop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBTimeLineTop.h; sourceTree = "<group>"; };
-		C68EF1BA1F457731009FD83C /* TBBTimeLineTop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBBTimeLineTop.m; sourceTree = "<group>"; };
-		C68EF1BB1F457731009FD83C /* TBBTimeLineTopModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBTimeLineTopModel.h; sourceTree = "<group>"; };
-		C68EF1BC1F457731009FD83C /* TBBTimeLineTopModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBBTimeLineTopModel.m; sourceTree = "<group>"; };
-		C68EF1BD1F457731009FD83C /* TBBTimeLineTopPointModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBTimeLineTopPointModel.h; sourceTree = "<group>"; };
-		C68EF1BE1F457731009FD83C /* TBBTimeLineTopPointModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBBTimeLineTopPointModel.m; sourceTree = "<group>"; };
-		C68EF1BF1F457731009FD83C /* TBBTimeLineTopTouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBTimeLineTopTouchView.h; sourceTree = "<group>"; };
-		C68EF1C01F457731009FD83C /* TBBTimeLineTopTouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBBTimeLineTopTouchView.m; sourceTree = "<group>"; };
-		C68EF1C11F457731009FD83C /* TBBTimeLineTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBTimeLineTopView.h; sourceTree = "<group>"; };
-		C68EF1C21F457731009FD83C /* TBBTimeLineTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBBTimeLineTopView.m; sourceTree = "<group>"; };
-		C68EF1C31F457731009FD83C /* TBBTimeLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBTimeLineView.h; sourceTree = "<group>"; };
-		C68EF1C41F457731009FD83C /* TBBTimeLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBBTimeLineView.m; sourceTree = "<group>"; };
+		C68EF1D01F457B27009FD83C /* TBBTimeLineBottom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBTimeLineBottom.h; sourceTree = "<group>"; };
+		C68EF1D11F457B27009FD83C /* TBBTimeLineBottom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBBTimeLineBottom.m; sourceTree = "<group>"; };
+		C68EF1D21F457B27009FD83C /* TBBTimeLineBottomPointModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBTimeLineBottomPointModel.h; sourceTree = "<group>"; };
+		C68EF1D31F457B27009FD83C /* TBBTimeLineBottomPointModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBBTimeLineBottomPointModel.m; sourceTree = "<group>"; };
+		C68EF1D41F457B27009FD83C /* TBBTimeLineBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBTimeLineBottomView.h; sourceTree = "<group>"; };
+		C68EF1D51F457B27009FD83C /* TBBTimeLineBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBBTimeLineBottomView.m; sourceTree = "<group>"; };
+		C68EF1D71F457B27009FD83C /* TBBTimeLineTop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBTimeLineTop.h; sourceTree = "<group>"; };
+		C68EF1D81F457B27009FD83C /* TBBTimeLineTop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBBTimeLineTop.m; sourceTree = "<group>"; };
+		C68EF1D91F457B27009FD83C /* TBBTimeLineTopModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBTimeLineTopModel.h; sourceTree = "<group>"; };
+		C68EF1DA1F457B27009FD83C /* TBBTimeLineTopModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBBTimeLineTopModel.m; sourceTree = "<group>"; };
+		C68EF1DB1F457B27009FD83C /* TBBTimeLineTopPointModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBTimeLineTopPointModel.h; sourceTree = "<group>"; };
+		C68EF1DC1F457B27009FD83C /* TBBTimeLineTopPointModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBBTimeLineTopPointModel.m; sourceTree = "<group>"; };
+		C68EF1DD1F457B27009FD83C /* TBBTimeLineTopTouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBTimeLineTopTouchView.h; sourceTree = "<group>"; };
+		C68EF1DE1F457B27009FD83C /* TBBTimeLineTopTouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBBTimeLineTopTouchView.m; sourceTree = "<group>"; };
+		C68EF1DF1F457B27009FD83C /* TBBTimeLineTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBTimeLineTopView.h; sourceTree = "<group>"; };
+		C68EF1E01F457B27009FD83C /* TBBTimeLineTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBBTimeLineTopView.m; sourceTree = "<group>"; };
+		C68EF1E11F457B27009FD83C /* TBBTimeLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBTimeLineView.h; sourceTree = "<group>"; };
+		C68EF1E21F457B27009FD83C /* TBBTimeLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBBTimeLineView.m; sourceTree = "<group>"; };
 		C6EFEB531F12310500ACB0D3 /* TBBStockView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TBBStockView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6EFEB571F12310500ACB0D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C6EFEB591F12310500ACB0D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -177,43 +177,43 @@
 			path = TBBKLine;
 			sourceTree = "<group>";
 		};
-		C68EF1B01F457731009FD83C /* TBBTimeLine */ = {
+		C68EF1CE1F457B27009FD83C /* TBBTimeLine */ = {
 			isa = PBXGroup;
 			children = (
-				C68EF1B11F457731009FD83C /* TBBTimeLineBottomView */,
-				C68EF1B81F457731009FD83C /* TBBTimeLineTopView */,
-				C68EF1C31F457731009FD83C /* TBBTimeLineView.h */,
-				C68EF1C41F457731009FD83C /* TBBTimeLineView.m */,
+				C68EF1CF1F457B27009FD83C /* TBBTimeLineBottomView */,
+				C68EF1D61F457B27009FD83C /* TBBTimeLineTopView */,
+				C68EF1E11F457B27009FD83C /* TBBTimeLineView.h */,
+				C68EF1E21F457B27009FD83C /* TBBTimeLineView.m */,
 			);
 			path = TBBTimeLine;
 			sourceTree = "<group>";
 		};
-		C68EF1B11F457731009FD83C /* TBBTimeLineBottomView */ = {
+		C68EF1CF1F457B27009FD83C /* TBBTimeLineBottomView */ = {
 			isa = PBXGroup;
 			children = (
-				C68EF1B21F457731009FD83C /* TBBTimeLineBottom.h */,
-				C68EF1B31F457731009FD83C /* TBBTimeLineBottom.m */,
-				C68EF1B41F457731009FD83C /* TBBTimeLineBottomPointModel.h */,
-				C68EF1B51F457731009FD83C /* TBBTimeLineBottomPointModel.m */,
-				C68EF1B61F457731009FD83C /* TBBTimeLineBottomView.h */,
-				C68EF1B71F457731009FD83C /* TBBTimeLineBottomView.m */,
+				C68EF1D01F457B27009FD83C /* TBBTimeLineBottom.h */,
+				C68EF1D11F457B27009FD83C /* TBBTimeLineBottom.m */,
+				C68EF1D21F457B27009FD83C /* TBBTimeLineBottomPointModel.h */,
+				C68EF1D31F457B27009FD83C /* TBBTimeLineBottomPointModel.m */,
+				C68EF1D41F457B27009FD83C /* TBBTimeLineBottomView.h */,
+				C68EF1D51F457B27009FD83C /* TBBTimeLineBottomView.m */,
 			);
 			path = TBBTimeLineBottomView;
 			sourceTree = "<group>";
 		};
-		C68EF1B81F457731009FD83C /* TBBTimeLineTopView */ = {
+		C68EF1D61F457B27009FD83C /* TBBTimeLineTopView */ = {
 			isa = PBXGroup;
 			children = (
-				C68EF1B91F457731009FD83C /* TBBTimeLineTop.h */,
-				C68EF1BA1F457731009FD83C /* TBBTimeLineTop.m */,
-				C68EF1BB1F457731009FD83C /* TBBTimeLineTopModel.h */,
-				C68EF1BC1F457731009FD83C /* TBBTimeLineTopModel.m */,
-				C68EF1BD1F457731009FD83C /* TBBTimeLineTopPointModel.h */,
-				C68EF1BE1F457731009FD83C /* TBBTimeLineTopPointModel.m */,
-				C68EF1BF1F457731009FD83C /* TBBTimeLineTopTouchView.h */,
-				C68EF1C01F457731009FD83C /* TBBTimeLineTopTouchView.m */,
-				C68EF1C11F457731009FD83C /* TBBTimeLineTopView.h */,
-				C68EF1C21F457731009FD83C /* TBBTimeLineTopView.m */,
+				C68EF1D71F457B27009FD83C /* TBBTimeLineTop.h */,
+				C68EF1D81F457B27009FD83C /* TBBTimeLineTop.m */,
+				C68EF1D91F457B27009FD83C /* TBBTimeLineTopModel.h */,
+				C68EF1DA1F457B27009FD83C /* TBBTimeLineTopModel.m */,
+				C68EF1DB1F457B27009FD83C /* TBBTimeLineTopPointModel.h */,
+				C68EF1DC1F457B27009FD83C /* TBBTimeLineTopPointModel.m */,
+				C68EF1DD1F457B27009FD83C /* TBBTimeLineTopTouchView.h */,
+				C68EF1DE1F457B27009FD83C /* TBBTimeLineTopTouchView.m */,
+				C68EF1DF1F457B27009FD83C /* TBBTimeLineTopView.h */,
+				C68EF1E01F457B27009FD83C /* TBBTimeLineTopView.m */,
 			);
 			path = TBBTimeLineTopView;
 			sourceTree = "<group>";
@@ -322,7 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				C677910D1F37A4AA0095BFE6 /* Common */,
-				C68EF1B01F457731009FD83C /* TBBTimeLine */,
+				C68EF1CE1F457B27009FD83C /* TBBTimeLine */,
 				C67791261F37A4BF0095BFE6 /* TBBKLine */,
 			);
 			path = Source;
@@ -481,22 +481,22 @@
 				C6EFEBAC1F12316000ACB0D3 /* MASConstraint.m in Sources */,
 				C6EFEBB41F12316000ACB0D3 /* ViewController+MASAdditions.m in Sources */,
 				C6EFEBAE1F12316000ACB0D3 /* MASLayoutConstraint.m in Sources */,
-				C68EF1C51F457731009FD83C /* TBBTimeLineBottom.m in Sources */,
+				C68EF1E31F457B27009FD83C /* TBBTimeLineBottom.m in Sources */,
 				C6EFEBB11F12316000ACB0D3 /* NSArray+MASAdditions.m in Sources */,
-				C68EF1C81F457731009FD83C /* TBBTimeLineTop.m in Sources */,
+				C68EF1E61F457B27009FD83C /* TBBTimeLineTop.m in Sources */,
 				C6EFEBB01F12316000ACB0D3 /* MASViewConstraint.m in Sources */,
 				C68EF1A91F3A9B6F009FD83C /* TBBKLineView.m in Sources */,
 				C6EFEBAF1F12316000ACB0D3 /* MASViewAttribute.m in Sources */,
-				C68EF1CD1F457731009FD83C /* TBBTimeLineView.m in Sources */,
+				C68EF1EB1F457B27009FD83C /* TBBTimeLineView.m in Sources */,
 				C6EFEBB31F12316000ACB0D3 /* View+MASAdditions.m in Sources */,
-				C68EF1CA1F457731009FD83C /* TBBTimeLineTopPointModel.m in Sources */,
+				C68EF1E81F457B27009FD83C /* TBBTimeLineTopPointModel.m in Sources */,
 				C6EFEB581F12310500ACB0D3 /* main.m in Sources */,
-				C68EF1C71F457731009FD83C /* TBBTimeLineBottomView.m in Sources */,
-				C68EF1CB1F457731009FD83C /* TBBTimeLineTopTouchView.m in Sources */,
+				C68EF1E51F457B27009FD83C /* TBBTimeLineBottomView.m in Sources */,
+				C68EF1E91F457B27009FD83C /* TBBTimeLineTopTouchView.m in Sources */,
 				C6EFEB8F1F12315300ACB0D3 /* BtnView.m in Sources */,
-				C68EF1C61F457731009FD83C /* TBBTimeLineBottomPointModel.m in Sources */,
-				C68EF1CC1F457731009FD83C /* TBBTimeLineTopView.m in Sources */,
-				C68EF1C91F457731009FD83C /* TBBTimeLineTopModel.m in Sources */,
+				C68EF1E41F457B27009FD83C /* TBBTimeLineBottomPointModel.m in Sources */,
+				C68EF1EA1F457B27009FD83C /* TBBTimeLineTopView.m in Sources */,
+				C68EF1E71F457B27009FD83C /* TBBTimeLineTopModel.m in Sources */,
 				C6EFEBAB1F12316000ACB0D3 /* MASCompositeConstraint.m in Sources */,
 				C6EFEBB21F12316000ACB0D3 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 			);
