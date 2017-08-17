@@ -126,8 +126,6 @@
                     ws.minVolume = lineModel.volume;
                 }else if (lineModel.volume > ws.maxVolume) {
                     ws.maxVolume = lineModel.volume;
-                }else if (lineModel.volume < 0){
-                    NSLog(@"第%ld个成交量%.2f小于0", (unsigned long)idx,lineModel.volume);
                 }
             }];
             NSLog(@"minVolume: %.2f---maxVolume: %.2f",self.minVolume,self.maxVolume);
