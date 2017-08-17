@@ -6,81 +6,19 @@
 //  Copyright © 2016年 唐彬彬. All rights reserved.
 //
 
-#import "TBBTimeLineTopView.h"
-//#import "UIView+FrameSet.h"
-//#import "UIColor+HYStockChart.h"
 #import "Common.h"
-#import "TBBTimeLine.h"
-#import "UIColor+HL.h"
-#import "TBBTimeLineModel.h"
-#import "TBBTimeLinePointModel.h"
-#import "TBBTouchView.h"
 #import "Masonry.h"
+#import "UIColor+HL.h"
+#import "CommonEnum.h"
+#import "TBBTimeLineTop.h"
+#import "TBBTimeLineTopTouchView.h"
+#import "TBBTimeLineTopView.h"
+#import "TBBTimeLineTopModel.h"
+#import "TBBTimeLineTopPointModel.h"
 
-typedef NS_ENUM(NSInteger, kLineType) {
-    /**
-     *  实线
-     */
-    kLineTypeFullLine = 1,
-    /**
-     *  虚线
-     */
-    kLineTypeDottedline = 2,
- 
-    
-};
-typedef NS_ENUM(NSInteger,kLineViewType) {
 
-    /**
-     *  分时图
-     */
-    kLineViewTypeTime = 1,
-    /**
-     *  k线图
-     */
-    kLineViewTypek = 2,
-};
-/**
- *  背景框的宽度
- */
-CGFloat const HYStockChartTimeLineGridWidth = 0.5;
-/**
- 绘制矩形框范围与view横向间距
- */
-#define kWidthMargin 10
-/**
- 绘制矩形框范围与view纵向间距
- */
-#define kHeightMargin 20
-#define kViewHeight self.frame.size.height
-#define kViewWidth self.frame.size.width
-
-/**
- 绘制矩形框宽度
- */
-#define kRectWidth (kViewWidth-2*kWidthMargin)
-/**
- 绘制矩形框高度
- */
-#define kRectHeight (kViewHeight-2*kHeightMargin)
-/**
- 横坐标文字上下文范围
- */
-#define kHorizontalTextRect CGRectMake(kWidthMargin,kRectHeight+kHeightMargin,kRectWidth, kHeightMargin)
-/**
- 纵坐标文字上下文范围TOP
- */
-#define kVerticalTextTopRect CGRectMake(kWidthMargin,kHeightMargin,100.f, kRectHeight)
-/**
- 纵坐标文字上下文范围Center
- */
-#define kVerticalTextCenterRect CGRectMake(kWidthMargin,kViewHeight/2-strSize.height/2,100.f, kRectHeight)
-/**
- 纵坐标文字上下文范围Bottom
- */
-#define kVerticalTextTopBottomRect CGRectMake(kWidthMargin,kRectHeight+kHeightMargin-strSize.height,100.f, kRectHeight)
 @interface TBBTimeLineTopView ()
-@property (nonatomic ,strong) TBBTimeLineModel *timePointModel;
+@property (nonatomic ,strong) TBBTimeLineTopModel *timePointModel;
 @property (nonatomic, strong) UIBezierPath    *drawPath;//绘制点
 @property (nonatomic,assign) CGFloat maxPrice ;// 最高点
 @property (nonatomic,assign) CGFloat minPrice ;// 最低点
@@ -89,11 +27,12 @@ CGFloat const HYStockChartTimeLineGridWidth = 0.5;
 @property (nonatomic, assign) kLineType lineType;
 @property (nonatomic ,assign) kLineViewType lineViewType;
 @property (nonatomic, strong) CAShapeLayer *lineLayer;
-@property (nonatomic, strong) TBBTouchView *touchView;
+@property (nonatomic, strong) TBBTimeLineTopTouchView *touchView;
 @property (nonatomic, strong) UIImageView  *pointView;//呼吸灯
 @property (nonatomic, strong) CAAnimationGroup *groups;
-@end
+@property (nonatomic, strong) UIColor *color; //用于判断柱状图的颜色
 
+@end
 @implementation TBBTimeLineTopView
 
 
@@ -109,6 +48,13 @@ CGFloat const HYStockChartTimeLineGridWidth = 0.5;
         _pointArray = [NSArray array];
     }
     return _pointArray;
+}
+-(NSArray *)colorArray {
+
+    if (!_colorArray) {
+        _colorArray = [NSArray array];
+    }
+    return _colorArray;
 }
 -(UIImageView *)pointView{
     if (!_pointView) {
@@ -126,6 +72,7 @@ CGFloat const HYStockChartTimeLineGridWidth = 0.5;
 
 -(instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
+       
     }
     return self;
 }
@@ -149,12 +96,12 @@ CGFloat const HYStockChartTimeLineGridWidth = 0.5;
  ******此处方法调用一定在绘制背景虚实线之前，否则会被覆盖属性，导致画出来的是虚线此处bug找了很久才发现原因*****
  */
     //绘制曲线图
-    TBBTimeLine *timeLine = [[TBBTimeLine alloc]initWithContext:context];
-    [timeLine drawTimeLineWithPositionArray:self.pointArray withLineColor:[UIColor blueColor] andLineWidth:1.0f];
+    TBBTimeLineTop *timeLine = [[TBBTimeLineTop alloc]initWithContext:context];
+    [timeLine drawTimeLineTopWithPositionArray:self.pointArray withLineColor:[UIColor colorWithHexString:@"1860FE"] andLineWidth:1.0f];
     //绘制呼吸灯view去最后一个点的坐标
     if (self.pointArray.count > 0) {
         
-        TBBTimeLinePointModel *lastObj = self.pointArray.lastObject;
+        TBBTimeLineTopPointModel *lastObj = self.pointArray.lastObject;
         self.pointView.frame = CGRectMake(lastObj.xPosition-12/2.f, lastObj.yPosition-10/2.f, 12.f, 12.f);
         [self.pointView.layer addAnimation:[self groups] forKey:@"aAlpha"];
     }
@@ -269,23 +216,45 @@ CGFloat const HYStockChartTimeLineGridWidth = 0.5;
     CGFloat maxY = kHeightMargin+kRectHeight;
   
     __block CGFloat offset = CGFLOAT_MIN;
-    //1.算y轴的单元值
-    if (_lineViewType == kLineViewTypeTime) {
+        //1.算y轴的单元值
         //x轴每一分钟一个点，9:30到11:30,13:00到15:00共计240分钟
         //每一个横坐标点所占单元
         CGFloat unitX = kRectWidth/240.f;
         NSLog(@"%f",unitX);
         //计算y轴每一个点所占单元
         NSMutableArray *pointArr = [NSMutableArray array];
+        NSMutableArray *colorArr = [NSMutableArray array];
         if (self.dataArr.count > 0) {
-            
-            [self.dataArr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                TBBTimeLineModel *lineModel = (TBBTimeLineModel *)obj;
+            for (int i=0; i<self.dataArr.count; i++) {
+                TBBTimeLineTopModel *lineModel = self.dataArr[i];
+                if (i == 0) {
+                    if(lineModel.lastPirce<lineModel.preClosePx) {
+                    
+                         self.color = [UIColor colorWithHexString:@"25AE44"];
+                    }else {
+                    
+                        self.color = [UIColor colorWithHexString:@"CE4115"];
+                    }
+                }else{
                 
+                    TBBTimeLineTopModel *lastMedel = self.dataArr[i-1];
+                    //价格跌
+                    if (lastMedel.lastPirce > lineModel.lastPirce) {
+                        self.color = [UIColor colorWithHexString:@"25AE44"];
+                    }else {
+                        //涨
+                        self.color = [UIColor colorWithHexString:@"CE4115"];
+                    }
+                }
                 offset = offset >fabs(lineModel.preClosePx-lineModel.lastPirce) ? offset:fabs(lineModel.preClosePx-lineModel.lastPirce);
-            }];
-            self.maxPrice =((TBBTimeLineModel *)[_dataArr firstObject]).preClosePx  + offset;
-            self.minPrice =((TBBTimeLineModel*)[_dataArr firstObject]).preClosePx  - offset;
+                [colorArr addObject:self.color];
+                
+            }
+            self.colorArray = colorArr;
+        }
+
+            self.maxPrice =((TBBTimeLineTopModel *)[_dataArr firstObject]).preClosePx  + offset;
+            self.minPrice =((TBBTimeLineTopModel*)[_dataArr firstObject]).preClosePx  - offset;
             self.averPrice = (self.maxPrice + self.minPrice)/2;
             CGFloat unitY = (self.maxPrice - self.minPrice)/(maxY-minY);
             if (!self.dataArr && self.dataArr == nil) {
@@ -294,21 +263,19 @@ CGFloat const HYStockChartTimeLineGridWidth = 0.5;
                 
                 //遍历当前的点坐标放入数组
                 [self.dataArr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                    TBBTimeLineModel *lineModel = (TBBTimeLineModel *)obj;
+                    TBBTimeLineTopModel *lineModel = (TBBTimeLineTopModel *)obj;
                     CGFloat x = idx*unitX+kWidthMargin;
                     //y值考虑最大可能超出，加上绘制的线宽和矩形框的线宽
-                    CGFloat y = (maxY-minY)-(lineModel.lastPirce - self.minPrice)/unitY+kHeightMargin+HYStockChartTimeLineGridWidth+1.0f;
-                    TBBTimeLinePointModel *pointModel = [TBBTimeLinePointModel initPositon:x yPosition:y];
+                    CGFloat y = maxY-(lineModel.lastPirce - self.minPrice)/unitY+HYStockChartTimeLineGridWidth+1.0f;
+                    TBBTimeLineTopPointModel *pointModel = [TBBTimeLineTopPointModel initPositon:x yPosition:y];
                     [pointArr addObject:pointModel];
                 }];
                 
                 self.pointArray = pointArr;
             }
-        }
+    
         return self.pointArray;
-    }
 
-    return self.pointArray;
 }
 /**
  设置需要绘制的字体样式

@@ -10,9 +10,10 @@
 #import "BtnView.h"
 #import "TBBTimeLineTopView.h"
 #import "Masonry.h"
+#import "Common.h"
 #import "UIColor+HL.h"
-#import "TBBTimeLine.h"
-#import "TBBTimeLineModel.h"
+#import "TBBTimeLineTop.h"
+#import "TBBTimeLineTopModel.h"
 #import "TBBTimeLineView.h"
 #define KScreenWidth [UIScreen mainScreen].bounds.size.width
 #define KScreenHeight [UIScreen mainScreen].bounds.size.height
@@ -42,7 +43,7 @@
     NSMutableArray *dataArray = [NSMutableArray array];
     
     for (NSDictionary *dic in datas) {
-        TBBTimeLineModel *model = [[TBBTimeLineModel alloc]init];
+        TBBTimeLineTopModel *model = [[TBBTimeLineTopModel alloc]init];
         model.data_time_stamp = dict[@"data_time_stamp"];
         model.currtTime = dic[@"curr_time"];
         model.preClosePx = [dic[@"pre_close_px"] floatValue] ;
@@ -53,7 +54,7 @@
         [dataArray addObject:model];
     }
     self.dataArr = dataArray;
-    TBBTimeLineView *lineView = [[TBBTimeLineView alloc]initWithFrame:CGRectMake(0, 114.0f, KScreenWidth, 300.f) withDataArr:self.dataArr];
+    TBBTimeLineView *lineView = [[TBBTimeLineView alloc]initWithFrame:CGRectMake(0, 114.0f, KScreenWidth, kTimeLineTopViewHeight+kTimeLineBottomViewHeight) withDataArr:self.dataArr];
     self.lineView = lineView;
     [self.view addSubview:self.lineView];
     
@@ -65,6 +66,7 @@
                 [views removeFromSuperview];
             }
             [ws.lineView addSubview:ws.lineView.topView];
+            [ws.lineView addSubview:ws.lineView.bottomView];
             [ws.lineView addSubview:ws.lineView.touchView];
         }else if (tag == 101){
             for (UIView *views in [ws.lineView subviews]) {

@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-@interface TBBTimeLine : NSObject
+@interface TBBTimeLineTop : NSObject
 /**曲线点位置数据数组*/
 @property(nonatomic,strong) NSArray *positionArr;
 
 @property(nonatomic,strong) CAShapeLayer *lineLayer;
 
 -(instancetype)initWithContext:(CGContextRef)context;
--(void)drawTimeLineWithPositionArray:(NSArray *)pointArray withLineColor:(UIColor *)lineColor andLineWidth:(CGFloat)lineWidth;
+-(void)drawTimeLineTopWithPositionArray:(NSArray *)pointArray withLineColor:(UIColor *)lineColor andLineWidth:(CGFloat)lineWidth;
 @end

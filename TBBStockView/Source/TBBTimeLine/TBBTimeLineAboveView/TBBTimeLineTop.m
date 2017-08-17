@@ -6,20 +6,19 @@
 //  Copyright © 2017年 唐彬彬. All rights reserved.
 //
 
-#import "TBBTimeLine.h"
-#import "TBBTimeLineModel.h"
+#import "TBBTimeLineTop.h"
 #import "UIColor+HL.h"
-#import "TBBTimeLinePointModel.h"
+#import "Common.h"
+#import "TBBTimeLineTopModel.h"
+#import "TBBTimeLineTopPointModel.h"
 
-#define kWidthMargin 10
-#define kHeightMargin 20
-#define kTimeLineAboveViewHeight 200.f
 
-@interface TBBTimeLine ()
+
+@interface TBBTimeLineTop ()
 @property(nonatomic,assign) CGContextRef context;
 
 @end
-@implementation TBBTimeLine
+@implementation TBBTimeLineTop
 
 -(instancetype)initWithContext:(CGContextRef)context
 {
@@ -37,18 +36,18 @@
  @param lineColor 线的颜色
  @param lineWidth 线宽
  */
--(void)drawTimeLineWithPositionArray:(NSArray *)pointArray withLineColor:(UIColor *)lineColor andLineWidth:(CGFloat)lineWidth{
+-(void)drawTimeLineTopWithPositionArray:(NSArray *)pointArray withLineColor:(UIColor *)lineColor andLineWidth:(CGFloat)lineWidth{
     if (pointArray.count <= 0) {
         return;
     };
     UIBezierPath *path = [UIBezierPath bezierPath];
     UIBezierPath *path1 = [UIBezierPath bezierPath];
     path.lineWidth = lineWidth;
-    [[UIColor colorWithHexString:@"1860FE"] setStroke];
+    [lineColor setStroke];
   
     for (NSInteger i = 0; i < pointArray.count; i++) {
         //当前的点
-        TBBTimeLinePointModel *positionModel = (TBBTimeLinePointModel *)pointArray[i];
+        TBBTimeLineTopPointModel *positionModel = (TBBTimeLineTopPointModel *)pointArray[i];
         //当前点是否包含X，Y
         if (i == 0) {
             //移动到当前点
@@ -57,7 +56,7 @@
         }
 
         if (i+1 < pointArray.count) {
-            TBBTimeLinePointModel *nextPositionModel = (TBBTimeLinePointModel *)pointArray[i+1];
+            TBBTimeLineTopPointModel *nextPositionModel = (TBBTimeLineTopPointModel *)pointArray[i+1];
             //绘制分时线条
             [path addLineToPoint:CGPointMake(nextPositionModel.xPosition, nextPositionModel.yPosition)];
             [path1 addLineToPoint:CGPointMake(nextPositionModel.xPosition, nextPositionModel.yPosition)];
@@ -67,10 +66,10 @@
 }
     [path stroke];
    //绘制背景
-    TBBTimeLinePointModel *firstObj = (TBBTimeLinePointModel *)pointArray.firstObject;
-    TBBTimeLinePointModel *lastObj = (TBBTimeLinePointModel *)pointArray.lastObject;
-    [path1 addLineToPoint:CGPointMake(lastObj.xPosition, kTimeLineAboveViewHeight-kHeightMargin)];
-    [path1 addLineToPoint:CGPointMake(kWidthMargin, kTimeLineAboveViewHeight-kHeightMargin)];
+    TBBTimeLineTopPointModel *firstObj = (TBBTimeLineTopPointModel *)pointArray.firstObject;
+    TBBTimeLineTopPointModel *lastObj = (TBBTimeLineTopPointModel *)pointArray.lastObject;
+    [path1 addLineToPoint:CGPointMake(lastObj.xPosition, kTimeLineTopViewHeight-kHeightMargin)];
+    [path1 addLineToPoint:CGPointMake(kWidthMargin, kTimeLineTopViewHeight-kHeightMargin)];
     [path1 addLineToPoint:CGPointMake(kWidthMargin, firstObj.yPosition)];
      [[UIColor colorWithHexString:@"ACD6FF"] setFill];
     [path1 fill];

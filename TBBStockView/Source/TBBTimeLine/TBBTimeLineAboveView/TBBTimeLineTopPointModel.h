@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-@interface TBBTimeLinePointModel : NSObject
+@interface TBBTimeLineTopPointModel : NSObject
 @property (nonatomic, assign) CGFloat xPosition;
 @property (nonatomic, assign) CGFloat yPosition;
-+(TBBTimeLinePointModel *)initPositon:(CGFloat)xPositon yPosition:(CGFloat)yPosition;
++(TBBTimeLineTopPointModel *)initPositon:(CGFloat)xPositon yPosition:(CGFloat)yPosition;
 @end

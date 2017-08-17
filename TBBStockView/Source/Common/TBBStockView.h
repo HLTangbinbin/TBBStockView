@@ -8,9 +8,9 @@
 #import "Common.h"
 #import "UIColor+HL.h"
 #import "TBBTimeLine.h"
-#import "TBBTimeLineModel.h"
-#import "TBBTimeLinePointModel.h"
+#import "TBBTimeLineTopModel.h"
+#import "TBBTimeLineTopPointModel.h"
 #import "TBBTimeLineTopView.h"
 #import "TBBTimeLineView.h"
-#import "TBBTouchView.h"
+#import "TBBTimeLineTopTouchView.h"
 

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 //分时图模型
-@interface TBBTimeLineModel : NSObject
+@interface TBBTimeLineTopModel : NSObject
 @property (nonatomic, copy)    NSString *data_time_stamp;
 @property (nonatomic, copy)    NSString *currtTime;
 @property (nonatomic, assign)  CGFloat  preClosePx;

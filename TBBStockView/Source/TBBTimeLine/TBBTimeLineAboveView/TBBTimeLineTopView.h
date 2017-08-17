@@ -10,6 +10,7 @@
 
 @interface TBBTimeLineTopView : UIView
 @property (nonatomic, strong) NSArray *dataArr;
+@property (nonatomic, strong) NSArray *colorArray; //颜色数组
 @property (nonatomic, strong) NSArray *pointArray;
 -(instancetype)initWithFrame:(CGRect)frame;
 -(NSArray *)caculatePosition;

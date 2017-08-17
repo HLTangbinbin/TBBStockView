@@ -6,9 +6,9 @@
 //  Copyright © 2017年 唐彬彬. All rights reserved.
 //
 
-#import "TBBTimeLineModel.h"
+#import "TBBTimeLineTopModel.h"
 
-@implementation TBBTimeLineModel
+@implementation TBBTimeLineTopModel
 
 
 @end
