@@ -7,10 +7,13 @@
 //
 #import "Common.h"
 #import "UIColor+HL.h"
+#import "TBBTimeLineView.h"
 #import "TBBTimeLine.h"
+#import "TBBTimeLineTopView.h"
+#import "TBBTimeLineBottom.h"
+#import "TBBTimeLineBottomView.h"
 #import "TBBTimeLineTopModel.h"
 #import "TBBTimeLineTopPointModel.h"
-#import "TBBTimeLineTopView.h"
-#import "TBBTimeLineView.h"
+#import "TBBTimeLineBottomPointModel.h"
 #import "TBBTimeLineTopTouchView.h"
 
