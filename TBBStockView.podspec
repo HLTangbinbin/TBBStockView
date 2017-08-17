@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "TBBStockView"
-  s.version      = "1.0.4"
+  s.version      = "1.0.3"
   s.summary      = "iOS股票证券走势图--分时图"
 
   s.description  = <<-DESC
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
   s.source       = { :git => "https://github.com/HLTangbinbin/TBBStockView.git", :tag => "#{s.version}" }
 
-  s.source_files  = 'TBBStockView/Source/**/*.{h,m}'
+  s.source_files  = 'TBBStockView/Source/Common/*.{h,m}'
   s.resources = "TBBStockView/Resource/*.*"
   s.requires_arc = true
 
